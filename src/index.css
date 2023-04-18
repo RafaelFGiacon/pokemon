@@ -11,6 +11,11 @@ body {
   border: 1px solid red;
 } */
 
+.list {
+  height: 800px;
+  overflow: scroll;
+}
+
 .list ul li {
   cursor: pointer
 }
@@ -30,3 +35,8 @@ body {
 .details-content li {
   white-space: nowrap;
 }
+
+/* .details {
+  position: fixed;
+  left: 200px;
+} */

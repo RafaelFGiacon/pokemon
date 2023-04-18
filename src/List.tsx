@@ -16,7 +16,7 @@ export const List: React.FC<ListProps> = ({
   useEffect(() => {
     const getPokemons = async () => {
       const response = await axios<ApiResponse>(
-        "https://pokeapi.co/api/v2/pokemon"
+        "https://pokeapi.co/api/v2/pokemon?offset=0&limit=1272"
       );
       setPokemons(response.data.results);
     };
