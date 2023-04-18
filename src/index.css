@@ -1,0 +1,32 @@
+body {
+  font-family: sans-serif;
+}
+
+.content {
+  display: flex;
+  gap: 32px;
+}
+
+/* .content > * {
+  border: 1px solid red;
+} */
+
+.list ul li {
+  cursor: pointer
+}
+
+.list ul li.active {
+  background-color: yellow;
+}
+
+.details-content {
+  display: flex;
+}
+
+.details-content img {
+  width: 200px;
+}
+
+.details-content li {
+  white-space: nowrap;
+}
