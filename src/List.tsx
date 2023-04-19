@@ -12,6 +12,7 @@ export const List: React.FC<ListProps> = ({
   setActivePokemon,
 }) => {
   const [pokemons, setPokemons] = useState<Pokemon[]>([]);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     const getPokemons = async () => {
@@ -23,11 +24,24 @@ export const List: React.FC<ListProps> = ({
     getPokemons();
   }, []);
 
+  const filteredPokemons = search
+    ? pokemons.filter((item) =>
+        item.name.toLowerCase().includes(search.toLowerCase())
+      )
+    : pokemons;
+
   return (
     <div className="list">
       <h2>List</h2>
+      <input
+        type="text"
+        placeholder="Search Pokemons"
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+      />
+      <button onClick={() => setSearch("")}>X</button>
       <ul>
-        {pokemons.map((item) => (
+        {filteredPokemons.map((item) => (
           <li
             key={item.name}
             onClick={() => setActivePokemon(item)}

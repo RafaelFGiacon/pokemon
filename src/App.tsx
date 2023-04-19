@@ -9,12 +9,14 @@ export const App = () => {
   return (
     <div>
       <h1>Pokemon</h1>
-      <div className="content">
-        <List
-          activePokemon={activePokemon}
-          setActivePokemon={setActivePokemon}
-        />
-        <Details activePokemon={activePokemon} />
+      <div>
+        <div className="content">
+          <List
+            activePokemon={activePokemon}
+            setActivePokemon={setActivePokemon}
+          />
+          <Details activePokemon={activePokemon} />
+        </div>
       </div>
     </div>
   );
