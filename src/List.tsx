@@ -30,6 +30,10 @@ export const List: React.FC<ListProps> = ({
       )
     : pokemons;
 
+  const setRandomPokemon = () => {
+    setActivePokemon(pokemons[Math.floor(Math.random() * pokemons.length)]);
+  };
+
   return (
     <div className="list">
       <h2>List</h2>
@@ -40,6 +44,7 @@ export const List: React.FC<ListProps> = ({
         onChange={(e) => setSearch(e.target.value)}
       />
       <button onClick={() => setSearch("")}>X</button>
+      <button onClick={setRandomPokemon}>R</button>
       <ul>
         {filteredPokemons.map((item) => (
           <li

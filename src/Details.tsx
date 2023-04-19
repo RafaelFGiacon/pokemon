@@ -31,7 +31,7 @@ export const Details: React.FC<DetailsProps> = ({ activePokemon }) => {
               <legend>Abilities</legend>
               <ul>
                 {details.abilities.map((item) => (
-                  <li>{item.ability.name}</li>
+                  <li key={item.ability.name}>{item.ability.name}</li>
                 ))}
               </ul>
             </fieldset>
