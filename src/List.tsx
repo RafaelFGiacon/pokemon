@@ -39,7 +39,7 @@ export const List: React.FC<ListProps> = ({
       <h2>List</h2>
       <input
         type="text"
-        placeholder="Search Pokemons"
+        placeholder="Search Pokemon"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
